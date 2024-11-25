@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Hipótesis de Riemann</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>La Hipótesis de Riemann</h1>
+        <h2>Introducción</h2>
+        <p>La Hipótesis de Riemann es uno de los problemas más profundos y célebres de la matemática moderna. Formulada por el matemático alemán Bernhard Riemann en 1859, esta hipótesis se refiere a la distribución de los números primos y está estrechamente relacionada con la función zeta de Riemann.</p>
+
+        <h2>La Función Zeta de Riemann</h2>
+        <p class="zeta-equation">&zeta;(s) = ∑ 1/n^s</p>
+        <p>La función zeta de Riemann, denotada como <code>&zeta;(s)</code>, es una función compleja definida para números complejos <code>s</code>. Esta función se puede expresar como una serie infinita para valores de <code>s</code> con parte real mayor que 1. La función también tiene una continuación analítica que se extiende a otros valores de <code>s</code>, excepto en <code>s = 1</code>, donde tiene un polo simple.</p>
+
+        <h2>La Hipótesis</h2>
+        <p>La Hipótesis de Riemann afirma que todos los ceros no triviales de la función zeta de Riemann tienen su parte real igual a 1/2. Es decir, si <code>&zeta;(s) = 0</code> y <code>s</code> no es un número negativo par (los ceros triviales), entonces la parte real de <code>s</code> debe ser 1/2.</p>
+
+        <h2>Importancia de la Hipótesis</h2>
+        <p>La importancia de la Hipótesis de Riemann radica en su conexión con la distribución de los números primos. Los números primos son los bloques de construcción de los números naturales, y la hipótesis proporciona una manera de entender cómo se distribuyen entre los números naturales. Si se demostrara la hipótesis, muchos otros resultados en teoría de números y otras áreas de la matemática serían confirmados.</p>
+
+        <h2>Estado Actual</h2>
+        <p>Hasta la fecha, la Hipótesis de Riemann sigue sin resolverse, a pesar de los numerosos esfuerzos de matemáticos de todo el mundo. Es uno de los siete Problemas del Milenio, y resolverlo conllevaría un premio de un millón de dólares del Instituto Clay de Matemáticas.</p>
+
+        <h2>Conclusión</h2>
+        <p>La Hipótesis de Riemann continúa siendo una de las fronteras más fascinantes y desafiantes de la matemática. Su resolución no solo marcaría un avance monumental en nuestro entendimiento de los números primos, sino que también tendría profundas implicaciones en diversas ramas de la ciencia y la tecnología.</p>
+
+        <h2>Calculadora de la Función Zeta de Riemann</h2>
+        <div class="form-group">
+            <label for="realPart">Parte Real (Re):</label>
+            <input type="text" id="realPart" placeholder="Ingrese la parte real">
+        </div>
+        <div class="form-group">
+            <label for="imaginaryPart">Parte Imaginaria (Im):</label>
+            <input type="text" id="imaginaryPart" placeholder="Ingrese la parte imaginaria">
+        </div>
+        <button onclick="calculateZeta()">Calcular &zeta;(s)</button>
+        <div class="result" id="result"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.4.4/math.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
