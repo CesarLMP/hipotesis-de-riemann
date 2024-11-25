@@ -1,4 +1,4 @@
-function calculateZeta() {
+function checkRiemannHypothesis() {
     let realPart = parseFloat(document.getElementById('realPart').value);
     let imaginaryPart = parseFloat(document.getElementById('imaginaryPart').value);
     if (isNaN(realPart) || isNaN(imaginaryPart)) {
@@ -7,14 +7,13 @@ function calculateZeta() {
     }
 
     let s = math.complex(realPart, imaginaryPart);
-    let zetaValue = zeta(s);
-    document.getElementById('result').innerHTML = `&zeta;(${s}) = ${zetaValue}`;
-}
+    let resultText = '';
 
-function zeta(s) {
-    let sum = math.complex(0, 0);
-    for (let n = 1; n <= 100; n++) {
-        sum = math.add(sum, math.divide(1, math.pow(n, s)));
+    if (realPart === 0.5) {
+        resultText = `El número complejo ${s} cumple con la Hipótesis de Riemann.`;
+    } else {
+        resultText = `El número complejo ${s} NO cumple con la Hipótesis de Riemann.`;
     }
-    return sum;
+
+    document.getElementById('result').innerHTML = resultText;
 }
